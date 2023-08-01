@@ -1,5 +1,5 @@
 # LCD-1602-serie
-Interfase entre cualquier micro y un display alfanumerico de 16x2 en modo serie
+Interface entre cualquier micro y un display alfanumerico de 16x2 en modo serie
 utilizando solo dos pines del mismo.
 
 La idea es comunicar el display con cualquier micro utilizando la menor cantidad de pines, esto se logra con una 
