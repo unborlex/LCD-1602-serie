@@ -12,9 +12,22 @@ void          enviar_cgram(char dato, char dir);
 void          display_clear();
 void          display_texto(char* dato, char columna, char linea);
 void          display_write(char dato, char columna, char linea);
+void          display_backon();
+void          display_backoff();
+
+char          back_estado = 0;     // 0 apagado, 1 encendido
+
+void          display_backon()
+{
+                   back_estado = 1;
+
+}
+void          display_backoff()
+{
+                   back_estado = 0;
 
 
-
+}
 void         display_write(char dato, char columna, char linea)
 {
                 char write_memo = 0;
@@ -261,7 +274,8 @@ void          s595_cargar(char cargar_dat)
 
                           //salida A   Backligth
                           digitalWrite(s1602_dat, LOW);
-                          if((0b00000010 & cargar_dat) !=0 )
+                          //if((0b00000010 & cargar_dat) !=0 )
+                          if(back_estado == 1 )
                                 digitalWrite(s1602_dat, HIGH);
                           delayMicroseconds(20);
 

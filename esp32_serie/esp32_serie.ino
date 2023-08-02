@@ -5,7 +5,7 @@ void setup()
           
                    hardware_init();
                    init_LCD16x2(); 
-          
+                   display_backon(); 
 
 }
 

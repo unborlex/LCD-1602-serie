@@ -9,6 +9,7 @@ void main()
 
            hardware_init();
            init_LCD16x2();
+           display_backon();
            while(1)
            {        
                     display_texto("Hola mundo", 0, 0);
